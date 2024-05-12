@@ -11,6 +11,8 @@ CREATE TABLE IF NOT EXISTS minio.my_schema.my_table (
     format = 'Parquet',
     external_location = 's3a://trino/'
 );
+
+
 create
 
 INSERT INTO minio.my_schema.my_table
