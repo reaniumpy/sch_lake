@@ -40,6 +40,10 @@ CREATE  TABLE IF NOT EXISTS hive.lake.ext_tiki_products (
 )
 
 
+
+
+
+
 -- Step 6: Create Managed table Tiki   
 CREATE  TABLE IF NOT EXISTS hive.lake.managed_tiki_products (
     tiki_pid BIGINT,

@@ -14,9 +14,6 @@ WITH (format = 'PARQUET',location = 's3a://iris/vv/');
 
 
 
-
-
-
 CREATE SCHEMA IF NOT EXISTS hive.iris
     WITH (location = 's3a://iris/');
 
@@ -48,3 +45,8 @@ SET
   class = 'zz'
 where sepal_length = 5.1
   ship_date IS NULL;
+
+
+SELECT * 
+FROM iceberg.iris.iris_parquet
+FOR TIMESTAMP AS OF TIMESTAMP '2022-03-23 09:59:29'
