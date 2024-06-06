@@ -2,6 +2,7 @@ version: '3.7'
 services:
   trino:
     image: 'trinodb/trino:latest'
+    container_name: trino
     hostname: trino
     ports:
       - '8085:8080'
@@ -12,6 +13,7 @@ services:
 
   mariadb:
     hostname: mariadb
+    container_name: mariadb
     image: mariadb:10.5.8
     ports:
       - 3306:3306
@@ -25,6 +27,7 @@ services:
 
   hive-metastore:
     hostname: hive-metastore
+    container_name: hive-metastore
     image: 'bitsondatadev/hive-metastore:latest'
     ports:
       - '9083:9083' # Metastore Thrift
