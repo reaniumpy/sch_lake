@@ -25,9 +25,8 @@ VALUES
 UPDATE
   iceberg.iris.iris_parquet
 SET
-  class = 'Yeah'
-where sepal_length = 5.1
-  ship_date IS NULL;
+  sepal_length = 100
+where class = 'Yeah'
 
 
 -- Time travel
